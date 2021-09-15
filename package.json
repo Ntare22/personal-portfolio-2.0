@@ -1,0 +1,23 @@
+{
+  "name": "personal-portfolio-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ntare22/personal-portfolio-2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ntare22/personal-portfolio-2.0/issues"
+  },
+  "homepage": "https://github.com/Ntare22/personal-portfolio-2.0#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0"
+  }
+}
