@@ -1,3 +1,31 @@
-h1 {
-    color: red;
+html {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: green;
+}
+
+.logo {
+  background-color: yellow;
+  font-weight: bolder;
+  font-size: x-large;
+  min-width: 20%;
+}
+
+.nav_items {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 50%;
+  background-color: red;
+}
+
+
