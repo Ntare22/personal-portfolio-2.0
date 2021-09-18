@@ -5,6 +5,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  background-color: #e5e5e5;
 }
 
 .flex {
@@ -19,6 +20,7 @@ body {
 .nav_bar {
   justify-content: space-between;
   padding: 1em;
+  background-color: #fff;
 }
 
 .logo {
@@ -67,6 +69,7 @@ body {
   transform: rotate(45deg) translate(-7px, -7px);
 }
 
+/* INTRO SECTION */
 .shapes,
 .shapes-two {
   align-items: center;
@@ -83,6 +86,11 @@ body {
 .sh-grp-three,
 .sh-group-five {
   flex: 1;
+}
+
+.intro-page {
+  background-color: #fff;
+  border-bottom-left-radius: 200px;
 }
 
 .backdrop {
@@ -187,6 +195,7 @@ body {
 }
 
 .socials {
+  list-style-type: none;
   width: 15%;
   justify-content: space-between;
 }
@@ -215,6 +224,197 @@ body {
   margin-top: -40px;
 }
 
+/************** WORKS SECTION ***************/
+.works-sec {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.project {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  grid-column: 2/6;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 1%;
+}
+
+.img-prg {
+  width: 40vh;
+  height: 40vh;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-info {
+  width: 50%;
+  margin: auto;
+}
+
+.project-title {
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 32px;
+  width: 60%;
+}
+
+.project-det {
+  font-size: 13px;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.project-det-desc,
+.project-det-yr {
+  color: #7a869a;
+}
+
+.prgt-det-circl {
+  background-image: url('../assets/prgt-circle-det.svg');
+  margin-top: 1%;
+  background-repeat: no-repeat;
+  width: 10px;
+}
+
+.project-desc {
+  font-size: 15px;
+  color: #344563;
+}
+
+.project-tags ul {
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.project-tag {
+  list-style: none;
+  background-color: #ebebff;
+  color: #6070ff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2%;
+  border-radius: 10%;
+}
+
+.project-link {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  background-color: #fff;
+  padding: 2%;
+  font-size: 17px;
+  border: 1px solid #396df2;
+  color: #396df2;
+  border-radius: 5px;
+}
+
+.project-link:hover {
+  cursor: pointer;
+}
+
+/************** ABOUT SECTION ***************/
+
+.about-me {
+  background-color: #fff;
+  border-top-right-radius: 200px;
+}
+
+.about-container {
+  width: 60%;
+  margin: auto;
+  padding: 4%;
+}
+
+.about-section-one {
+  width: 40%;
+}
+
+.languages {
+  width: 50%;
+  padding: 4%;
+}
+
+.socials-about {
+  list-style-type: none;
+  justify-content: space-between;
+  width: 40%;
+  margin-left: -35px;
+}
+
+.about-title {
+  color: #091e42;
+  font-size: 40px;
+  width: 50%;
+}
+
+.about-desc {
+  color: #091e42;
+  font-size: 16px;
+}
+
+.languages-content {
+  display: none;
+}
+
+.collapse-btn {
+  padding: 5%;
+  margin-top: 4px;
+  border-radius: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: #dfe1e6;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.collapse-btn::after {
+  content: '\003E';
+  color: #acb7c3;
+  float: right;
+}
+
+.active {
+  border-bottom: 0;
+}
+
+.active::after {
+  content: '\003E';
+  color: #acb7c3;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.langs-container {
+  padding: 3%;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.language-item {
+  background-color: #f7f7f9;
+  width: 20%;
+  padding: 4%;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+.language-text {
+  color: #253858;
+  font-weight: 500;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.img-lang {
+  width: 50px;
+}
+
+/* MOBILE VERSION */
 @media only screen and (max-width: 1023px) {
   .hamburger {
     display: block;
@@ -251,6 +451,11 @@ body {
   .backdrop-item {
     width: 50%;
     height: 100%;
+  }
+
+  .intro-page {
+    background-color: #fff;
+    border-bottom-left-radius: 0;
   }
 
   .rectangle-left {
@@ -344,5 +549,133 @@ body {
   .socials {
     width: 60%;
     justify-content: space-between;
+  }
+
+  /************** WORKS SECTION ***************/
+  .works-sec {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .project {
+    flex-direction: column;
+    grid-column: 2/13;
+    width: 70%;
+    margin-top: 10%;
+  }
+
+  .img-prg {
+    display: block;
+    width: 40vh;
+    height: 40vh;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .project-info {
+    width: 90%;
+    margin: auto;
+  }
+
+  .project-det {
+    font-size: 13px;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .project-tags {
+    justify-content: space-between;
+    width: 60%;
+    margin-left: -40px;
+  }
+
+  .project-tag {
+    background-color: #ebebff;
+    color: #6070ff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4%;
+    border-radius: 5%;
+  }
+
+  .project-link {
+    margin-top: 5%;
+    font-size: 12px;
+  }
+
+  /************** ABOUT SECTION ***************/
+  .about-me {
+    border-top-right-radius: 0;
+  }
+
+  .about-container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .about-section-one {
+    width: 100%;
+  }
+
+  .about-title {
+    color: #091e42;
+    font-size: 40px;
+    width: 50%;
+  }
+
+  .about-desc {
+    color: #091e42;
+    font-size: 16px;
+  }
+
+  .languages {
+    width: 100%;
+    padding: 0;
+  }
+
+  .langs-container {
+    flex-direction: column;
+    width: 100vh;
+  }
+
+  .language-item {
+    flex-direction: row;
+    margin-top: 10px;
+    width: 40%;
+    justify-content: space-between;
+  }
+
+  .language-text {
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .langs {
+    background-color: #f7f7f9;
+    border-radius: 5px;
+    padding: 3%;
+    display: flex;
+    margin-top: 3px;
+  }
+
+  .langs > p {
+    font-size: 20px;
+    margin-right: -10px;
+  }
+
+  .lang-img {
+    margin-top: 2%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .lang-container {
+    list-style-type: none;
+    margin-left: -20px;
+    font-weight: 900;
+    display: none;
   }
 }

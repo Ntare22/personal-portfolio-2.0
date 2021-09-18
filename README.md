@@ -9,7 +9,9 @@
 
 ## Built With
 
-- N/A
+- HTML5
+- CSS
+- Javascript
 
 ## Live Demo
 
