@@ -702,7 +702,7 @@ body {
   color: #ebebff;
 }
 
-#invisible {
+.invisible {
   visibility: hidden;
   display: block;
   margin: 0 auto;

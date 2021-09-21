@@ -3,10 +3,6 @@
 
 > This is my Personal Portofolio Project with Microverse
 
-<!-- ![screenshot](./app_screenshot.png) -->
-
-<!-- Additional description about the project and its features. -->
-
 ## Built With
 
 - HTML5
