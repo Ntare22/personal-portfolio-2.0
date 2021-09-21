@@ -502,19 +502,40 @@
         <form action="https://formspree.io/f/xpzkbobk" method="POST">
           <ul>
             <li>
-              <label for="names">Names</label>
-              <input type="text" name="names" id="names">
+              <label for="names" class="invisible">Names</label>
+              <input
+                type="text"
+                name="names"
+                maxlength="30"
+                placeholder="Full name"
+                id="names"
+                required
+              />
             </li>
             <li>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email">
+              <label for="email" class="invisible">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                id="email"
+                required
+              />
             </li>
-            <li>
-              <label for="message"></label>
-              <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <li id="message-area">
+              <label for="message" class="invisible"></label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Write your message here"
+                cols="30"
+                maxlength="500"
+                rows="10"
+                required
+              ></textarea>
             </li>
           </ul>
-          <button class="send-message">Send Message</button>
+          <button class="send-message" type="submit">Get in touch</button>
         </form>
       </section>
     </div>
