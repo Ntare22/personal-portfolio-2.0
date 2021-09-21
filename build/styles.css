@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -238,8 +240,9 @@ body {
 }
 
 .img-prg {
-  width: 40vh;
-  height: 40vh;
+  display: block;
+  width: 85%;
+  height: 85%;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -270,7 +273,7 @@ body {
 
 .prgt-det-circl {
   background-image: url('../assets/prgt-circle-det.svg');
-  margin-top: 1%;
+  padding-top: 10%;
   background-repeat: no-repeat;
   width: 10px;
 }
@@ -278,13 +281,6 @@ body {
 .project-desc {
   font-size: 15px;
   color: #344563;
-}
-
-.project-tags ul {
-  margin: 0;
-  list-style-type: none;
-  justify-content: space-between;
-  width: 30%;
 }
 
 .project-tag {
@@ -563,14 +559,6 @@ body {
     margin-top: 10%;
   }
 
-  .img-prg {
-    display: block;
-    width: 40vh;
-    height: 40vh;
-    margin: auto;
-    margin-top: 10px;
-  }
-
   .project-info {
     width: 90%;
     margin: auto;
@@ -675,4 +663,106 @@ body {
     font-weight: 900;
     display: none;
   }
+}
+
+/* ================= Contact form section ==================================== */
+.contact {
+  background-image: url('../assets/Contact-form-bg.png');
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.contact-me {
+  display: block;
+  text-align: center;
+  background-image: url('../assets/bar-top.png');
+  background-repeat: no-repeat;
+  background-position: right -5px top 28px;
+  padding-top: 20px;
+}
+
+.contact-me h1 {
+  background-image: url('../assets/top-img.png');
+  background-repeat: no-repeat;
+  background-position: right 3px top 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 15px;
+}
+
+.contact-me p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ebebff;
+}
+
+.invisible {
+  visibility: hidden;
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  background: #6070ff;
+}
+
+form ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-image: url('../assets/bottom-circle.png');
+  background-repeat: no-repeat;
+  background-position: right 45px top 452px;
+  background-size: 55px;
+  padding-bottom: 25px;
+}
+
+form ul li input,
+textarea {
+  background-color: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  color: #172b4d;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+textarea {
+  margin-top: 15px;
+  color: #b3bac5;
+}
+
+.send-message {
+  background: #fff;
+  border-radius: 8px;
+  width: 140px;
+  height: 48px;
+  margin-left: 30px;
+  margin-bottom: 25px;
+  color: #6070ff;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+#message-area {
+  background-image: url('../assets/bootom-img.png');
+  background-repeat: no-repeat;
+  background-position: right 15px top 250px;
+  background-size: 83px;
+  padding-bottom: 45px;
 }
