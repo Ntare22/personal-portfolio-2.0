@@ -169,7 +169,7 @@ body {
 
 /*** INTRO SECTION ***/
 .text-container {
-  max-width: 100%;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -519,11 +519,12 @@ textarea {
 
 .send-message {
   background: #fff;
+  margin-left: -55%;
+  margin-top: -15%;
   border-radius: 8px;
   width: 140px;
   height: 48px;
-  margin-left: 16px;
-  margin-bottom: 25px;
+  margin-bottom: 8%;
   color: #6070ff;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -948,6 +949,6 @@ textarea {
   }
 
   .send-message {
-    margin-left: 370px;
+    margin-left: 0;
   }
 }
