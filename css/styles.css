@@ -810,10 +810,12 @@ textarea {
     border: 1px solid #396df2;
     color: #396df2;
     border-radius: 10px;
+    transition: width 2s, height 2s, transform 2s;
   }
 
   .project-link:hover {
     cursor: pointer;
+    transform: rotate(360deg);
   }
 
   /**** ABOUT SECTION ****/

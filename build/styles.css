@@ -198,6 +198,7 @@ body {
   padding: 0;
 }
 
+
 .shapes-two {
   background-image:
     url('../assets/sm-trans-circle.svg'),
@@ -807,6 +808,11 @@ textarea {
     border: 1px solid #396df2;
     color: #396df2;
     border-radius: 10px;
+    transition: width 2s, height 2s, transform 2s;
+  }
+
+  .project-link:hover {
+    transform: rotate(360deg);
   }
 
   .project-link:hover {
