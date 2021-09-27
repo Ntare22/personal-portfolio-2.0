@@ -215,7 +215,6 @@ body {
 }
 
 /************** WORKS SECTION ***************/
-
 .works-sec {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -230,7 +229,6 @@ body {
 }
 
 /************** ABOUT SECTION ***************/
-
 .about-me {
   background-color: #fff;
   border-top-right-radius: 100px;
