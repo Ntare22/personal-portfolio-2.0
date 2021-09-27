@@ -4,6 +4,7 @@ function toggle(btn) {
 
 let colapseBtn = document.getElementsByClassName('collapse-btn');
 
+// Creating a collapsible button to ensure toggle
 for (let i = 0; i < colapseBtn.length; i++) {
   colapseBtn[i].addEventListener('click', function () {
     this.classList.toggle("active");
