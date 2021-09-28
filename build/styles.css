@@ -198,7 +198,6 @@ body {
   padding: 0;
 }
 
-
 .shapes-two {
   background-image:
     url('../assets/sm-trans-circle.svg'),
@@ -376,6 +375,8 @@ body {
 
 .project-link:hover {
   cursor: pointer;
+  background-color: #396df2;
+  color: #fff;
 }
 
 /*** ABOUT SECTION ***/
@@ -812,11 +813,8 @@ textarea {
   }
 
   .project-link:hover {
-    transform: rotate(360deg);
-  }
-
-  .project-link:hover {
     cursor: pointer;
+    transform: rotate(360deg);
   }
 
   /**** ABOUT SECTION ****/

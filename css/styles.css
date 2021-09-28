@@ -377,6 +377,8 @@ body {
 
 .project-link:hover {
   cursor: pointer;
+  background-color: #396df2;
+  color: #fff;
 }
 
 /*** ABOUT SECTION ***/
