@@ -1,5 +1,7 @@
 function toggle(btn) {
   btn.classList.toggle('toggle');
+  let navList = document.getElementById('mobile_nav');
+  navList.classList.toggle("mobile_nav")
 }
 
 let colapseBtn = document.getElementsByClassName('collapse-btn');
