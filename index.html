@@ -18,8 +18,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jim's Portfolio</title>
-    <link rel="stylesheet" href="./build/styles.css" />
+    <title>Jim Ntare | Software Engineer</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
@@ -37,10 +37,21 @@
           <div class="burger-two"></div>
           <div class="burger-three"></div>
         </div>
+        <div id="mobile_nav" class="mobile_nav">
+          <div class="mobile_nav_item" onclick="goTo(this)">
+            <a href="#portfolio">Portfolio</a>
+          </div>
+          <div class="mobile_nav_item" onclick="goTo(this)">
+            <a href="#about">About</a>
+          </div>
+          <div class="mobile_nav_item" onclick="goTo(this)">
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="container flex-col">
-      <div class="intro-page">
+      <div id='portfolio' class="intro-page">
         <div class="backdrop flex">
           <div class="backdrop-item">
             <div>
@@ -270,7 +281,7 @@
           </div>
         </div>
       </section>
-      <section class="about-me">
+      <section id="about" class="about-me">
         <div class="about-container flex">
           <div class="about-section-one">
             <h1 class="about-title">About Myself</h1>
@@ -466,7 +477,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-background">
+      <section id="contact" class="contact-background">
         <div class="contact">
           <div class="contact-me">
             <h1>Contact Me</h1>
