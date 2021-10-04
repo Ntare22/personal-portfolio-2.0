@@ -577,12 +577,13 @@ textarea {
   padding: 50px 40px;
 }
 
-.mobile_nav_item {
+.mobile_nav_item a {
   color: #fff;
-  font-family: Poppins sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 32px;
   margin: 10px 0;
+  text-decoration: none;
 }
 
 @media (min-width: 600px) {

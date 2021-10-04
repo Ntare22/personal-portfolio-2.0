@@ -4,6 +4,11 @@ function toggle(btn) {
   navList.classList.toggle("mobile_nav")
 }
 
+function goTo(link) {
+  const hamburger = document.querySelector('.hamburger');
+  toggle(hamburger)
+}
+
 let colapseBtn = document.getElementsByClassName('collapse-btn');
 
 // Creating a collapsible button to ensure toggle
