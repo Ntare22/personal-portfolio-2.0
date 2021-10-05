@@ -235,16 +235,18 @@ body {
 /** MODAL **/
 .modal-container {
   box-sizing: border-box;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   padding: 19px;
+  z-index: 2;
 }
 
 .modal {
-  background-color: yellow;
+  background-color: white;
   width: 90%;
   height: 90%;
   margin: auto;
@@ -253,7 +255,6 @@ body {
 }
 
 .modal-content {
-  /* background-color: green; */
   width: 90%;
   margin: auto;
 }
