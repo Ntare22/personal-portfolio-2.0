@@ -259,6 +259,24 @@ body {
   margin: auto;
 }
 
+.modal-title {
+  margin: 10px 0;
+}
+
+.modal-img {
+  display: block;
+  width: 85%;
+  height: 85%;
+  margin: 20px 0;
+  min-width: 100%;
+}
+
+.modal-exit {
+  float: right;
+  padding: 10px;
+}
+
+
 /************** ABOUT SECTION ***************/
 .about-me {
   background-color: #fff;
