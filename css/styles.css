@@ -588,10 +588,19 @@ textarea {
 }
 
 #error-message {
-  background-color: #F7A607;
+  background-color: #f7a607;
+  font-size: 13px;
   color: #091e42;
   margin: 0;
   width: 100%;
+}
+
+.error-message {
+  visibility: hidden;
+}
+
+.error-visible {
+  visibility: visible;
 }
 
 /*** HAMBURGER  ***/
