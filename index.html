@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jim Ntare | Software Engineer</title>
+    <title>Jim's Portfolio</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -180,104 +180,47 @@
           <div class="shapes-two"></div>
         </section>
       </div>
-      <section class="works-sec">
-        <div class="project flex">
-          <img
-            src="./assets/img-prg.png"
-            alt="canopy project"
-            class="img-prg"
-          />
-          <div class="project-info">
-            <h2 class="project-title">Tonic</h2>
-            <div class="project-det flex">
-              <div class="project-det-tit">CANOPY</div>
-              <div>
-                <div class="prgt-det-circl"></div>
+      <section id="works-sec" class="works-sec">
+
+        <div id="modal-container" class="modal-container">
+          <div class="modal">
+
+            <img class="modal-exit" src="assets/exit.svg" alt="" onclick="modalExit()">
+
+            <div class="modal-content">
+              <h2 id="modal-title" class="project-title modal-title">Tonic</h2>
+              <div id='model-det' class="project-det flex">
+                <div id="project-det-tit" class="project-det-tit">CANOPY</div>
+                <div>
+                  <div class="prgt-det-circl"></div>
+                </div>
+                <div id="project-det-desc" class="project-det-desc">Backend End Dev</div>
+                <div>
+                  <div class="prgt-det-circl"></div>
+                </div>
+                <div id="project-det-yr" class="project-det-yr">2015</div>
               </div>
-              <div class="project-det-desc">Backend End Dev</div>
-              <div>
-                <div class="prgt-det-circl"></div>
+
+              <img
+                src="./assets/img-prg.png"
+                alt="canopy project"
+                class="modal-img"
+                id="modal-img"
+              />
+              <div class="project-det-container">
+                <div class="project-desc">
+                  <p id="project-desc">
+                    A daily selection of privately personalized reads; no accounts
+                    or sign-ups required
+                  </p>
+                </div>
+                <div class="prgt-details">
+                  <ul id="project-tags" class="project-tags flex"></ul>
+                  <button id='view-demo' class="project-link">View Demo</button>
+                  <button id='source-code' class="project-link">Source Code</button>
+                </div>
               </div>
-              <div class="project-det-yr">2015</div>
             </div>
-            <div class="project-desc">
-              <p>
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required
-              </p>
-            </div>
-            <ul class="project-tags flex">
-              <li class="project-tag">html</li>
-              <li class="project-tag">css</li>
-              <li class="project-tag">javascript</li>
-            </ul>
-            <button class="project-link">See Project</button>
-          </div>
-        </div>
-        <div class="project flex">
-          <img
-            src="./assets/img-prg.png"
-            alt="canopy project"
-            class="img-prg"
-          />
-          <div class="project-info">
-            <h2 class="project-title">Multi Post Stories</h2>
-            <div class="project-det flex">
-              <div class="project-det-tit">CANOPY</div>
-              <div>
-                <div class="prgt-det-circl"></div>
-              </div>
-              <div class="project-det-desc">Backend End Dev</div>
-              <div>
-                <div class="prgt-det-circl"></div>
-              </div>
-              <div class="project-det-yr">2015</div>
-            </div>
-            <div class="project-desc">
-              <p>
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required
-              </p>
-            </div>
-            <ul class="project-tags flex">
-              <li class="project-tag">html</li>
-              <li class="project-tag">css</li>
-              <li class="project-tag">javascript</li>
-            </ul>
-            <button class="project-link">See Project</button>
-          </div>
-        </div>
-        <div class="project flex">
-          <img
-            src="./assets/img-prg.png"
-            alt="canopy project"
-            class="img-prg"
-          />
-          <div class="project-info">
-            <h2 class="project-title">Tonic</h2>
-            <div class="project-det flex">
-              <div class="project-det-tit">CANOPY</div>
-              <div>
-                <div class="prgt-det-circl"></div>
-              </div>
-              <div class="project-det-desc">Backend End Dev</div>
-              <div>
-                <div class="prgt-det-circl"></div>
-              </div>
-              <div class="project-det-yr">2015</div>
-            </div>
-            <div class="project-desc">
-              <p>
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required
-              </p>
-            </div>
-            <ul class="project-tags flex">
-              <li class="project-tag">html</li>
-              <li class="project-tag">css</li>
-              <li class="project-tag">javascript</li>
-            </ul>
-            <button class="project-link">See Project</button>
           </div>
         </div>
       </section>
