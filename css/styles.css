@@ -587,6 +587,22 @@ textarea {
   padding-bottom: 45px;
 }
 
+#error-message {
+  background-color: #f7a607;
+  font-size: 13px;
+  color: #091e42;
+  margin: 0;
+  width: 100%;
+}
+
+.error-message {
+  visibility: hidden;
+}
+
+.error-visible {
+  visibility: visible;
+}
+
 /*** HAMBURGER  ***/
 .hamburger {
   cursor: pointer;
@@ -1022,6 +1038,14 @@ textarea {
 
   .send-message {
     margin-left: 0;
+  }
+
+  #error-message {
+    max-width: 40%;
+    margin: auto;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 
   /** MODAL **/

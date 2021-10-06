@@ -32,7 +32,7 @@ const projects = [
     projectTitle: 'Tonic',
     projectDetails: ['CANOPY', 'Backend End Dev', '2015'],
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    projectTags: ['html', 'javascript', 'css'], 
+    projectTags: ['html', 'javascript', 'css'],
     viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
     viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
   },
@@ -92,12 +92,12 @@ function displayProjects(projects) {
     projectImg.classList = 'img-prg';
     projectImg.setAttribute('src', project.img);
     projectImg.setAttribute('alt', project.imgAlt);
-    
+
     projectContainer.appendChild(projectImg);
-    
+
     const projectInfo = document.createElement('div');
     projectInfo.classList = 'project-info';
-    
+
     const projectTitle = document.createElement('h2');
     projectTitle.innerHTML = project.projectTitle;
     projectTitle.classList = 'project-title';
@@ -106,7 +106,7 @@ function displayProjects(projects) {
 
     const projectDetails = document.createElement('div');
     projectDetails.classList = 'project-det flex';
-    
+
     const containerDiv = document.createElement('div');
     const containerDiv2 = document.createElement('div');
     const projectDetSeparator = document.createElement('div');
@@ -123,11 +123,11 @@ function displayProjects(projects) {
     const projectDescDetails = document.createElement('div');
     projectDescDetails.classList = 'project-det-desc';
     projectDescDetails.innerHTML = project.projectDetails[1]
-    
+
     const projectDescYear = document.createElement('div');
     projectDescYear.classList = 'project-det-yr';
     projectDescYear.innerHTML = project.projectDetails[2];
-    
+
     projectDetails.appendChild(projectDetailTitle);
     projectDetails.appendChild(containerDiv);
     projectDetails.appendChild(projectDescDetails);
@@ -155,7 +155,7 @@ function displayProjects(projects) {
     const projectTag3 = document.createElement('li');
     projectTag3.classList = 'project-tag';
     projectTag3.innerHTML = project.projectTags[2];
-    
+
 
     projectTags.appendChild(projectTag);
     projectTags.appendChild(projectTag2);
@@ -174,7 +174,26 @@ function displayProjects(projects) {
     projectSection.appendChild(projectContainer);
   });
 
-  
+
 }
 
 displayProjects(projects)
+
+const form = document.getElementById('contact-form')
+
+form.addEventListener('submit', function(event) {
+  const email = document.getElementById('email').value;
+  const emailRegex = new RegExp('^[a-z0-9-]+@[a-z0-9-]+\.[a-z0-9-.]+$');
+
+  const message = document.getElementById('error-message');
+
+  if (!email.includes('@')) {
+    message.innerHTML = 'you should submit a valid email'
+    message.classList = 'error-visible'
+    event.preventDefault();
+  } else if (!emailRegex.test(email)) {
+    message.innerHTML = 'email should be all in lower case'
+    message.classList = 'error-visible'
+    event.preventDefault();
+  }
+})
