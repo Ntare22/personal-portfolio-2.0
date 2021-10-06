@@ -27,12 +27,8 @@ To get a local copy up and running follow these simple example steps.
 - Click on the index.html file
 ### Install
 - Run `npm install` to install project dependencies
-### Usage
-- N/A
-### Run tests
-- N/A
 ### Deployment
-- N/A
+- GitHub Pages
 
 
 ## Authors

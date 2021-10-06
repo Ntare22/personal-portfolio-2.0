@@ -11,7 +11,6 @@ function goTo(link) {
 
 let colapseBtn = document.getElementsByClassName('collapse-btn');
 
-// Creating a collapsible button to ensure toggle
 for (let i = 0; i < colapseBtn.length; i++) {
   colapseBtn[i].addEventListener('click', function () {
     this.classList.toggle("active");
@@ -26,45 +25,69 @@ for (let i = 0; i < colapseBtn.length; i++) {
   })
 }
 
-
-// Create works section
-
 const projects = [
   {
-    img: './assets/img-prg.png',
+    img: './assets/landscape.png',
     imgAlt: 'canopy',
     projectTitle: 'Tonic',
     projectDetails: ['CANOPY', 'Backend End Dev', '2015'],
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    projectTags: ['html', 'javascript', 'css']
+    projectTags: ['html', 'javascript', 'css'], 
+    viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
   },
   {
-    img: './assets/img-prg.png',
+    img: './assets/landscape.png',
     imgAlt: 'canopy',
     projectTitle: 'Tonic',
     projectDetails: ['CANOPY', 'Backend End Dev', '2015'],
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    projectTags: ['html', 'javascript', 'css']
+    projectTags: ['html', 'javascript', 'css'],
+    viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
   },
   {
-    img: './assets/img-prg.png',
+    img: './assets/landscape.png',
     imgAlt: 'canopy',
-    projectTitle: 'Tonic',
+    projectTitle: 'Jim',
     projectDetails: ['CANOPY', 'Backend End Dev', '2015'],
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    projectTags: ['html', 'javascript', 'css']
+    projectTags: ['html', 'javascript', 'css'],
+    viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
   },
 ]
 
-function displayProjects(projects) {
+function modalExit() {
+  document.getElementById('modal-container').style.display = 'none';
+}
 
+function viewProject(project) {
+  document.getElementById('modal-container').style.display = 'block';
+
+  document.getElementById('modal-title').innerHTML = project.projectTitle;
+  document.getElementById('project-det-tit').innerHTML = project.projectDetails[0];
+  document.getElementById('project-det-desc').innerHTML = project.projectDetails[1];
+  document.getElementById('project-det-yr').innerHTML = project.projectDetails[2];
+  document.getElementById('modal-img').setAttribute('src', project.img);
+  document.getElementById('project-desc').innerHTML = project.projectDesc;
+  const parentTag = document.getElementById('project-tags')
+  parentTag.innerHTML = '';
+  project.projectTags.map(tag => {
+    let newListTag = document.createElement('li');
+    newListTag.classList = 'project-tag';
+    newListTag.innerHTML = tag;
+    parentTag.appendChild(newListTag)
+  });
+}
+
+function displayProjects(projects) {
   projects.map(project => {
-    // project conteiner
+
     const projectSection = document.querySelector('#works-sec');
     const projectContainer = document.createElement('div');
     projectContainer.classList = 'project flex';
 
-    // project img
     const projectImg = document.createElement('img');
     projectImg.classList = 'img-prg';
     projectImg.setAttribute('src', project.img);
@@ -75,19 +98,15 @@ function displayProjects(projects) {
     const projectInfo = document.createElement('div');
     projectInfo.classList = 'project-info';
     
-    //// Project Info \\\
-    // project title
     const projectTitle = document.createElement('h2');
     projectTitle.innerHTML = project.projectTitle;
     projectTitle.classList = 'project-title';
     projectInfo.appendChild(projectTitle);
     projectContainer.appendChild(projectInfo);
 
-    // project details
     const projectDetails = document.createElement('div');
     projectDetails.classList = 'project-det flex';
     
-    // ** project dot ** \\
     const containerDiv = document.createElement('div');
     const containerDiv2 = document.createElement('div');
     const projectDetSeparator = document.createElement('div');
@@ -116,7 +135,6 @@ function displayProjects(projects) {
     projectDetails.appendChild(projectDescYear);
     projectInfo.appendChild(projectDetails);
 
-    // project description
     const projectDescription = document.createElement('div');
     projectDescription.classList = 'project-desc';
     const descParagraph = document.createElement('p')
@@ -124,7 +142,6 @@ function displayProjects(projects) {
     projectDescription.appendChild(descParagraph);
     projectInfo.appendChild(projectDescription);
 
-    // project tags
     const projectTags = document.createElement('ul');
     projectTags.classList = 'project-tags flex';
     const projectTag = document.createElement('li');
@@ -145,15 +162,15 @@ function displayProjects(projects) {
     projectTags.appendChild(projectTag3);
     projectInfo.appendChild(projectTags);
 
-
-    // project button
     const projectBtn = document.createElement('button');
     projectBtn.classList = 'project-link';
     projectBtn.innerHTML = 'See Project';
+    projectBtn.addEventListener('click', function() {
+      viewProject(project);
+    }, false);
 
     projectInfo.appendChild(projectBtn);
 
-    // append the project in section
     projectSection.appendChild(projectContainer);
   });
 
