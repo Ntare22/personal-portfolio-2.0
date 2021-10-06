@@ -178,3 +178,18 @@ function displayProjects(projects) {
 }
 
 displayProjects(projects)
+
+const form = document.getElementById('contact-form')
+
+form.addEventListener('submit', function(event) {
+  const email = document.getElementById('email').value;
+
+  const emailRegex = new RegExp('^[a-z0-9-]+@[a-z0-9-]+\.[a-z0-9-.]+$');
+
+  if (!emailRegex.test(email)) {
+    console.log('email is not fulfilling requirements')
+    event.preventDefault();
+  }
+
+
+})
