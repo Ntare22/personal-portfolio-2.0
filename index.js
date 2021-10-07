@@ -205,9 +205,10 @@ inputs.forEach((input) => {
 });
 
 function getInput() {
-  localStorage.setItem('name', inputs[0].value)
+  localStorage.setItem('names', inputs[0].value)
   localStorage.setItem('email', inputs[1].value)
 }
 
-inputs[0].setAttribute('value', localStorage.getItem('name'))
-inputs[1].setAttribute('value', localStorage.getItem('email'))
+for (item of inputs) {
+  item.setAttribute('value', localStorage.getItem(item.id))
+}
