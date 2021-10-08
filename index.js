@@ -1,29 +1,32 @@
 function toggle(btn) {
   btn.classList.toggle('toggle');
-  let navList = document.getElementById('mobile_nav');
-  navList.classList.toggle("mobile_nav")
+  const navList = document.getElementById('mobile_nav');
+  navList.classList.toggle('mobile_nav');
 }
 
-function goTo(link) {
+function goTo() {
   const hamburger = document.querySelector('.hamburger');
-  toggle(hamburger)
+  toggle(hamburger);
 }
 
-let colapseBtn = document.getElementsByClassName('collapse-btn');
+const mobileNav = document.querySelectorAll('.mobile_nav_item');
+mobileNav.forEach((item) => item.addEventListener('click', goTo));
 
-for (let i = 0; i < colapseBtn.length; i++) {
-  colapseBtn[i].addEventListener('click', function () {
-    this.classList.toggle("active");
-    let contentLang = this.nextElementSibling;
+const colapseBtn = document.getElementsByClassName('collapse-btn');
 
-    if (contentLang.style.display === "block") {
-      colapseBtn.value = 'collapse-btn'
-      contentLang.style.display = "none";
+Object.values(colapseBtn).forEach((btn) => {
+  btn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    const contentLang = this.nextElementSibling;
+
+    if (contentLang.style.display === 'block') {
+      colapseBtn.value = 'collapse-btn';
+      contentLang.style.display = 'none';
     } else {
-      contentLang.style.display = "block";
+      contentLang.style.display = 'block';
     }
-  })
-}
+  });
+});
 
 const projects = [
   {
@@ -34,7 +37,7 @@ const projects = [
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
     projectTags: ['html', 'javascript', 'css'],
     viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
-    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0',
   },
   {
     img: './assets/landscape.png',
@@ -44,7 +47,7 @@ const projects = [
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
     projectTags: ['html', 'javascript', 'css'],
     viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
-    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0',
   },
   {
     img: './assets/landscape.png',
@@ -54,36 +57,38 @@ const projects = [
     projectDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
     projectTags: ['html', 'javascript', 'css'],
     viewDemo: 'https://github.com/Ntare22/personal-portfolio-2.0',
-    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0'
+    viewSource: 'https://github.com/Ntare22/personal-portfolio-2.0',
   },
-]
+];
 
 function modalExit() {
   document.getElementById('modal-container').style.display = 'none';
 }
+modalExit();
 
 function viewProject(project) {
   document.getElementById('modal-container').style.display = 'block';
 
+  const [company, role, year] = project.projectDetails;
+
   document.getElementById('modal-title').innerHTML = project.projectTitle;
-  document.getElementById('project-det-tit').innerHTML = project.projectDetails[0];
-  document.getElementById('project-det-desc').innerHTML = project.projectDetails[1];
-  document.getElementById('project-det-yr').innerHTML = project.projectDetails[2];
+  document.getElementById('project-det-tit').innerHTML = company;
+  document.getElementById('project-det-desc').innerHTML = role;
+  document.getElementById('project-det-yr').innerHTML = year;
   document.getElementById('modal-img').setAttribute('src', project.img);
   document.getElementById('project-desc').innerHTML = project.projectDesc;
-  const parentTag = document.getElementById('project-tags')
+  const parentTag = document.getElementById('project-tags');
   parentTag.innerHTML = '';
-  project.projectTags.map(tag => {
-    let newListTag = document.createElement('li');
+  project.projectTags.forEach((tag) => {
+    const newListTag = document.createElement('li');
     newListTag.classList = 'project-tag';
     newListTag.innerHTML = tag;
-    parentTag.appendChild(newListTag)
+    parentTag.appendChild(newListTag);
   });
 }
 
 function displayProjects(projects) {
-  projects.map(project => {
-
+  projects.forEach((project) => {
     const projectSection = document.querySelector('#works-sec');
     const projectContainer = document.createElement('div');
     projectContainer.classList = 'project flex';
@@ -116,17 +121,19 @@ function displayProjects(projects) {
     containerDiv.appendChild(projectDetSeparator);
     containerDiv2.appendChild(projectDetSeparator2);
 
+    const [company, role, year] = project.projectDetails;
+
     const projectDetailTitle = document.createElement('div');
     projectDetailTitle.classList = 'project-det-tit';
-    projectDetailTitle.innerHTML = project.projectDetails[0];
+    projectDetailTitle.innerHTML = company;
 
     const projectDescDetails = document.createElement('div');
     projectDescDetails.classList = 'project-det-desc';
-    projectDescDetails.innerHTML = project.projectDetails[1]
+    projectDescDetails.innerHTML = role;
 
     const projectDescYear = document.createElement('div');
     projectDescYear.classList = 'project-det-yr';
-    projectDescYear.innerHTML = project.projectDetails[2];
+    projectDescYear.innerHTML = year;
 
     projectDetails.appendChild(projectDetailTitle);
     projectDetails.appendChild(containerDiv);
@@ -137,35 +144,27 @@ function displayProjects(projects) {
 
     const projectDescription = document.createElement('div');
     projectDescription.classList = 'project-desc';
-    const descParagraph = document.createElement('p')
+    const descParagraph = document.createElement('p');
     descParagraph.innerHTML = project.projectDesc;
     projectDescription.appendChild(descParagraph);
     projectInfo.appendChild(projectDescription);
 
     const projectTags = document.createElement('ul');
     projectTags.classList = 'project-tags flex';
-    const projectTag = document.createElement('li');
-    projectTag.classList = 'project-tag';
-    projectTag.innerHTML = project.projectTags[0];
 
-    const projectTag2 = document.createElement('li');
-    projectTag2.classList = 'project-tag';
-    projectTag2.innerHTML = project.projectTags[1];
+    project.projectTags.forEach((tag) => {
+      const projectTag = document.createElement('li');
+      projectTag.classList = 'project-tag';
+      projectTag.innerHTML = tag;
+      projectTags.appendChild(projectTag);
+    });
 
-    const projectTag3 = document.createElement('li');
-    projectTag3.classList = 'project-tag';
-    projectTag3.innerHTML = project.projectTags[2];
-
-
-    projectTags.appendChild(projectTag);
-    projectTags.appendChild(projectTag2);
-    projectTags.appendChild(projectTag3);
     projectInfo.appendChild(projectTags);
 
     const projectBtn = document.createElement('button');
     projectBtn.classList = 'project-link';
     projectBtn.innerHTML = 'See Project';
-    projectBtn.addEventListener('click', function() {
+    projectBtn.addEventListener('click', () => {
       viewProject(project);
     }, false);
 
@@ -173,27 +172,38 @@ function displayProjects(projects) {
 
     projectSection.appendChild(projectContainer);
   });
-
-
 }
 
-displayProjects(projects)
+displayProjects(projects);
 
-const form = document.getElementById('contact-form')
+const form = document.getElementById('contact-form');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', (event) => {
   const email = document.getElementById('email').value;
-  const emailRegex = new RegExp('^[a-z0-9-]+@[a-z0-9-]+\.[a-z0-9-.]+$');
+  const emailRegex = new RegExp('^[a-z0-9-]+@[a-z0-9-]+[a-z0-9-.]+$');
 
   const message = document.getElementById('error-message');
 
   if (!email.includes('@')) {
-    message.innerHTML = 'you should submit a valid email'
-    message.classList = 'error-visible'
+    message.innerHTML = 'you should submit a valid email';
+    message.classList = 'error-visible';
     event.preventDefault();
   } else if (!emailRegex.test(email)) {
-    message.innerHTML = 'email should be all in lower case'
-    message.classList = 'error-visible'
+    message.innerHTML = 'email should be all in lower case';
+    message.classList = 'error-visible';
     event.preventDefault();
   }
-})
+});
+
+const inputs = form.querySelectorAll('#names, #email');
+
+const getInput = () => {
+  localStorage.setItem('names', inputs[0].value);
+  localStorage.setItem('email', inputs[1].value);
+};
+
+inputs.forEach((input) => {
+  input.addEventListener('input', getInput());
+});
+
+inputs.forEach((item) => item.setAttribute('value', localStorage.getItem(item.id)));
